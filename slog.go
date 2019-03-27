@@ -10,7 +10,7 @@ type Logger interface {
 
 	// Fatalf logs a fatal log and then exits the program.
 	// Arguments are handled in the manner of fmt.Printf.
-	Fatalf(args ...interface{})
+	Fatalf(format string, args ...interface{})
 
 	// Error logs error logs.
 	// Arguments are handled in the manner of fmt.Print.
@@ -18,7 +18,7 @@ type Logger interface {
 
 	// Errorf logs error logs.
 	// Arguments are handled in the manner of fmt.Printf.
-	Errorf(args ...interface{})
+	Errorf(format string, args ...interface{})
 
 	// Warning logs warning logs.
 	// Arguments are handled in the manner of fmt.Print.
@@ -26,7 +26,7 @@ type Logger interface {
 
 	// Warning logs warning logs.
 	// Arguments are handled in the manner of fmt.Printf.
-	Warningf(args ...interface{})
+	Warningf(format string, args ...interface{})
 
 	// Info logs informational logs.
 	// Arguments are handled in the manner of fmt.Print.
@@ -34,7 +34,7 @@ type Logger interface {
 
 	// Infof logs informational logs.
 	// Arguments are handled in the manner of fmt.Printf.
-	Infof(args ...interface{})
+	Infof(format string, args ...interface{})
 
 	// Raw sends the string s to the logs without any additional formatting.
 	Raw(s string)
