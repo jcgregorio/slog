@@ -1,0 +1,41 @@
+// slog defines a common interface for loggers.
+package slog
+
+// Logger is the interface that all loggers should conform to.
+//
+type Logger interface {
+	// Fatal logs a fatal log and then exits the program.
+	// Arguments are handled in the manner of fmt.Print.
+	Fatal(args ...interface{})
+
+	// Fatalf logs a fatal log and then exits the program.
+	// Arguments are handled in the manner of fmt.Printf.
+	Fatalf(args ...interface{})
+
+	// Error logs error logs.
+	// Arguments are handled in the manner of fmt.Print.
+	Error(args ...interface{})
+
+	// Errorf logs error logs.
+	// Arguments are handled in the manner of fmt.Printf.
+	Errorf(args ...interface{})
+
+	// Warning logs warning logs.
+	// Arguments are handled in the manner of fmt.Print.
+	Warning(args ...interface{})
+
+	// Warning logs warning logs.
+	// Arguments are handled in the manner of fmt.Printf.
+	Warningf(args ...interface{})
+
+	// Info logs informational logs.
+	// Arguments are handled in the manner of fmt.Print.
+	Info(args ...interface{})
+
+	// Infof logs informational logs.
+	// Arguments are handled in the manner of fmt.Printf.
+	Infof(args ...interface{})
+
+	// Raw sends the string s to the logs without any additional formatting.
+	Raw(s string)
+}
