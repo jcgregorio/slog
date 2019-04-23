@@ -36,6 +36,14 @@ type Logger interface {
 	// Arguments are handled in the manner of fmt.Printf.
 	Infof(format string, args ...interface{})
 
+	// Debug logs debugging logs.
+	// Arguments are handled in the manner of fmt.Print.
+	Debug(args ...interface{})
+
+	// Debugf logs debugging logs.
+	// Arguments are handled in the manner of fmt.Printf.
+	Debugf(format string, args ...interface{})
+
 	// Raw sends the string s to the logs without any additional formatting.
 	Raw(s string)
 }
